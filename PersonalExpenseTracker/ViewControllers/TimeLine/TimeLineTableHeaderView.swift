@@ -16,6 +16,9 @@ class TimeLineTableHeaderView: UITableViewHeaderFooterView {
         super.init(reuseIdentifier: reuseIdentifier)
         contentView.backgroundColor = .systemPink
         contentView.addSubview(TimeLineTableHeaderLabel)
+        contentView.addSubview(chartView)
+//        contentView.addSubview(lable)
+        chartView.addSubview(lable)
         
     }
     
@@ -34,6 +37,26 @@ class TimeLineTableHeaderView: UITableViewHeaderFooterView {
         return label
     }()
     
+    
+    private let chartView: UIView = {
+        let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.backgroundColor = .systemBlue
+        view.contentMode = .center
+        return view
+    }()
+    
+    private let lable: UILabel = {
+        var label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.numberOfLines = 0
+        label.text = " CHART VIEW "
+        label.textColor = .black
+        label.font = UIFont.systemFont(ofSize: 30)
+        label.textAlignment = .justified
+        return label
+    }()
+    
     func configureConstraints(){
         let TimeLineTableHeaderLabelConstraints = [
             TimeLineTableHeaderLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor,constant: 24),
@@ -42,6 +65,18 @@ class TimeLineTableHeaderView: UITableViewHeaderFooterView {
             TimeLineTableHeaderLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor,constant: -8)
         ]
         
+        let chartViewConstraints = [
+            chartView.topAnchor.constraint(equalTo: contentView.topAnchor),
+            
+
+        ]
+        
+        let labelConstraints = [
+            lable.centerXAnchor.constraint(equalTo: chartView.centerXAnchor)
+        ]
+        
+        NSLayoutConstraint.activate(chartViewConstraints)
+        NSLayoutConstraint.activate(labelConstraints)
         NSLayoutConstraint.activate(TimeLineTableHeaderLabelConstraints)
         
     }

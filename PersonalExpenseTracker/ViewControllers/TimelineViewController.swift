@@ -17,48 +17,16 @@ class TimelineViewController: UIViewController {
         super.viewDidLoad()
         title = " TIMELINE CONTROLLER"
         view.backgroundColor = .systemYellow
-        chartView.addSubview(lable)
+        
         
         view.addSubview(navigationBar)
-        view.addSubview(chartView)
         view.addSubview(timelineTableView)
-//        view.addSubview(scrollView)
-//      configureScrollView()
+
         configureConstraints()
         configureTimeLineTableView()
 
     }
   
-    func configureScrollView(){
-        
-        scrollView.frame = view.bounds
-        scrollView.addSubview(navigationBar)
-        scrollView.addSubview(chartView)
-        scrollView.addSubview(timelineTableView)
-        scrollView.contentSize = CGSize(width: 1000, height: 1000)
-        
-    }
-
-    
-    private let chartView: UIView = {
-        let view = UIView()
-        view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = .systemBlue
-        view.contentMode = .center
-        return view
-    }()
-    
-    private let lable: UILabel = {
-        var label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.numberOfLines = 0
-        label.text = " CHART VIEW "
-        label.textColor = .black
-        label.font = UIFont.systemFont(ofSize: 30)
-        label.textAlignment = .justified
-        return label
-    }()
-    
     private let  navigationBar: UINavigationBar = {
         var navigationBar = UINavigationBar()
         navigationBar.translatesAutoresizingMaskIntoConstraints  = false
@@ -84,24 +52,15 @@ class TimelineViewController: UIViewController {
 //        timelineTableView.addSubview(chartView)
 //        timelineTableView.allowsMultipleSelection = true
 //        timelineTableView.insetsContentViewsToSafeArea  = true
+        timelineTableView.register(TimeLineTableHeaderView.self, forHeaderFooterViewReuseIdentifier: TimeLineTableHeaderView.identifier)
+        timelineTableView.tableHeaderView = TimeLineTableHeaderView(reuseIdentifier: TimeLineTableHeaderView.identifier)
     }
     
     
     func configureConstraints(){
         
-        let chartViewConstraints = [
-            chartView.topAnchor.constraint(equalTo: navigationBar.bottomAnchor,constant: 5),
-            chartView.heightAnchor.constraint(equalToConstant: 0.25*(view.frame.height)),
-            chartView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            chartView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
-        ]
-        
-        let labelConstraints = [
-            lable.centerXAnchor.constraint(equalTo: chartView.centerXAnchor)
-        ]
-        
+      
         let timelineTableViewConstraints = [
-            timelineTableView.topAnchor.constraint(equalTo: chartView.bottomAnchor,constant: 5),
             timelineTableView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
             timelineTableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             timelineTableView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
@@ -114,8 +73,7 @@ class TimelineViewController: UIViewController {
             navigationBar.heightAnchor.constraint(equalToConstant: 44)
         ]
         
-        NSLayoutConstraint.activate(chartViewConstraints)
-        NSLayoutConstraint.activate(labelConstraints)
+      
         NSLayoutConstraint.activate(timelineTableViewConstraints)
         NSLayoutConstraint.activate(navigationBarConstraints)
     }
@@ -151,17 +109,14 @@ extension TimelineViewController: UITableViewDataSource,UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("index row: ",indexPath.row)
-    }
-    
-}
-
-extension TimelineViewController: UIScrollViewDelegate {
-    
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-      
-       
         
     }
+   
+}
+
+
+extension TimelineViewController: UIScrollViewDelegate {
+  
     
     func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
         let y = timelineTableView.contentOffset
