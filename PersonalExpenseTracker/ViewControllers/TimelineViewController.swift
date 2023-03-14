@@ -9,20 +9,36 @@ import UIKit
 
 class TimelineViewController: UIViewController {
 
-    private let timelineTableView = UITableView(frame: .zero, style: .grouped)
-    
+    private let timelineTableView = UITableView(frame: .zero, style: .plain)
+
+    private let scrollView = UIScrollView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        title = " TIMELINE CONTROLLER"
         view.backgroundColor = .systemYellow
         chartView.addSubview(lable)
+        
         view.addSubview(navigationBar)
         view.addSubview(chartView)
         view.addSubview(timelineTableView)
+//        view.addSubview(scrollView)
+//      configureScrollView()
         configureConstraints()
         configureTimeLineTableView()
+
     }
+  
+    func configureScrollView(){
+        
+        scrollView.frame = view.bounds
+        scrollView.addSubview(navigationBar)
+        scrollView.addSubview(chartView)
+        scrollView.addSubview(timelineTableView)
+        scrollView.contentSize = CGSize(width: 1000, height: 1000)
+        
+    }
+
     
     private let chartView: UIView = {
         let view = UIView()
@@ -31,7 +47,6 @@ class TimelineViewController: UIViewController {
         view.contentMode = .center
         return view
     }()
-
     
     private let lable: UILabel = {
         var label = UILabel()
@@ -48,9 +63,13 @@ class TimelineViewController: UIViewController {
         var navigationBar = UINavigationBar()
         navigationBar.translatesAutoresizingMaskIntoConstraints  = false
         navigationBar.backgroundColor = .systemRed
-        
+        navigationBar.tintColor = .label
         return navigationBar
     }()
+    
+
+    
+   
     
     func configureTimeLineTableView(){
         timelineTableView.translatesAutoresizingMaskIntoConstraints = false
@@ -60,7 +79,11 @@ class TimelineViewController: UIViewController {
        
         timelineTableView.estimatedRowHeight = 70
         timelineTableView.rowHeight = UITableView.automaticDimension
-        
+        timelineTableView.tableHeaderView = TimeLineTableHeaderView()
+        timelineTableView.sectionHeaderHeight = 24
+//        timelineTableView.addSubview(chartView)
+//        timelineTableView.allowsMultipleSelection = true
+//        timelineTableView.insetsContentViewsToSafeArea  = true
     }
     
     
@@ -97,7 +120,6 @@ class TimelineViewController: UIViewController {
         NSLayoutConstraint.activate(navigationBarConstraints)
     }
     
-    
 }
 
 extension TimelineViewController: UITableViewDataSource,UITableViewDelegate{
@@ -107,7 +129,7 @@ extension TimelineViewController: UITableViewDataSource,UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: TimeLineTableViewCell.identifier, for: indexPath) as! TimeLineTableViewCell
-        cell.delegate = self
+//        cell.delegate = self
         cell.categoryNameLabel.text = "Naveen"
         cell.walletTypeLabel.text = "Cash"
         return cell
@@ -117,12 +139,38 @@ extension TimelineViewController: UITableViewDataSource,UITableViewDelegate{
         return 1
     }
     
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "DATE"
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let header = SectionHeaderLabel(reuseIdentifier: SectionHeaderLabel.identifier)
+//        header.delegate = self
+        return header
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 44
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("index row: ",indexPath.row)
+    }
+    
+}
+
+extension TimelineViewController: UIScrollViewDelegate {
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+      
+       
+        
+    }
+    
+    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        let y = timelineTableView.contentOffset
+        print("content off set ",y)
+        let x = timelineTableView.contentInset
+        print("conetnt on set ",x)
     }
     
     
     
 }
-
 

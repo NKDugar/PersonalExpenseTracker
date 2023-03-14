@@ -7,13 +7,10 @@
 
 import Foundation
 
-struct Transactions{
+struct Transactions: TransactionsContract{
     
-    let transactionId: Int
-    let transactionCategory: String
-    let transactionDate: Date
-    var transactionAmount: Int
-    var transactionType: String
-    var transactionNote: String?
+    
+    
+    
     
 }

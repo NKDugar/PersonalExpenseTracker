@@ -11,14 +11,15 @@ public struct User {
     let name: String
     let emailId: String
     let password: String
-    var wallets: [Wallet]
+    var wallets =  [Wallet]()
    
-    init(name: String, emailId: String, password: String, wallets: [Wallet]) {
+    init(name: String, emailId: String, password: String) {
         self.name = name
         self.emailId = emailId
         self.password = password
-        self.wallets = wallets
     }
 
+    
+    
 }
 

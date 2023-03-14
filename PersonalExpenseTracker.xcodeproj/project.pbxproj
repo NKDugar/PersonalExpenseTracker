@@ -9,27 +9,40 @@
 /* Begin PBXBuildFile section */
 		0613114E29B615DA00DFF01B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0613114D29B615DA00DFF01B /* LoginViewController.swift */; };
 		0613115029B6184C00DFF01B /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0613114F29B6184C00DFF01B /* RegisterViewController.swift */; };
+		0663746329BEE6BE000D217D /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0663746229BEE6BE000D217D /* AccountViewController.swift */; };
+		0663746529BEE718000D217D /* ReportsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0663746429BEE718000D217D /* ReportsViewController.swift */; };
+		0663746929BF3D87000D217D /* InititalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0663746829BF3D87000D217D /* InititalViewController.swift */; };
+		0663746B29BF52C6000D217D /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0663746A29BF52C6000D217D /* Protocols.swift */; };
+		0663746D29BF552D000D217D /* Income.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0663746C29BF552D000D217D /* Income.swift */; };
+		0663746F29BF5694000D217D /* Expense.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0663746E29BF5694000D217D /* Expense.swift */; };
+		0663747129BF5780000D217D /* DummyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0663747029BF5780000D217D /* DummyData.swift */; };
 		0665FCED29ACA2C20099A76A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0665FCEC29ACA2C20099A76A /* AppDelegate.swift */; };
 		0665FCEF29ACA2C20099A76A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0665FCEE29ACA2C20099A76A /* SceneDelegate.swift */; };
 		0665FCF129ACA2C20099A76A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0665FCF029ACA2C20099A76A /* ViewController.swift */; };
 		0665FCF629ACA2C60099A76A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0665FCF529ACA2C60099A76A /* Assets.xcassets */; };
 		0665FCF929ACA2C60099A76A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0665FCF729ACA2C60099A76A /* LaunchScreen.storyboard */; };
 		066B45C229B06BF5003CE5C8 /* DatabasePersonalExpenseTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 066B45C129B06BF5003CE5C8 /* DatabasePersonalExpenseTracker.swift */; };
-		066B45CC29B0C9DF003CE5C8 /* AppLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 066B45C829B0C9DF003CE5C8 /* AppLogo.png */; };
-		066B45CD29B0C9DF003CE5C8 /* PET - onboardingImage.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 066B45C929B0C9DF003CE5C8 /* PET - onboardingImage.jpeg */; };
-		066B45CE29B0C9DF003CE5C8 /* PET - onboardingImage3.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 066B45CA29B0C9DF003CE5C8 /* PET - onboardingImage3.jpeg */; };
-		066B45CF29B0C9DF003CE5C8 /* PET - onboardingImage2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 066B45CB29B0C9DF003CE5C8 /* PET - onboardingImage2.jpeg */; };
 		067F690C29BAF59400148DEB /* TimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067F690B29BAF59400148DEB /* TimelineViewController.swift */; };
 		067F690F29BB0A6F00148DEB /* TimeLineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067F690E29BB0A6F00148DEB /* TimeLineTableViewCell.swift */; };
+		067F691129BB366800148DEB /* WalletsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067F691029BB366800148DEB /* WalletsViewController.swift */; };
+		067F691329BB3E1700148DEB /* TimeLineTableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067F691229BB3E1700148DEB /* TimeLineTableHeaderView.swift */; };
+		067F691529BB471300148DEB /* SectionHeaderLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067F691429BB471300148DEB /* SectionHeaderLabel.swift */; };
+		0685F1D829C0352700C4BBEA /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0685F1D729C0352700C4BBEA /* Enums.swift */; };
 		069501A529B47C1E0048924A /* personalExpenseTrackerEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 069501A429B47C1E0048924A /* personalExpenseTrackerEnums.swift */; };
 		069501A729B501270048924A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 069501A629B501270048924A /* User.swift */; };
 		069501A929B5016D0048924A /* Wallet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 069501A829B5016D0048924A /* Wallet.swift */; };
-		069501AB29B501E60048924A /* Transactions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 069501AA29B501E60048924A /* Transactions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0613114D29B615DA00DFF01B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		0613114F29B6184C00DFF01B /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		0663746229BEE6BE000D217D /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
+		0663746429BEE718000D217D /* ReportsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportsViewController.swift; sourceTree = "<group>"; };
+		0663746829BF3D87000D217D /* InititalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InititalViewController.swift; sourceTree = "<group>"; };
+		0663746A29BF52C6000D217D /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
+		0663746C29BF552D000D217D /* Income.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Income.swift; sourceTree = "<group>"; };
+		0663746E29BF5694000D217D /* Expense.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expense.swift; sourceTree = "<group>"; };
+		0663747029BF5780000D217D /* DummyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyData.swift; sourceTree = "<group>"; };
 		0665FCE929ACA2C20099A76A /* PersonalExpenseTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PersonalExpenseTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0665FCEC29ACA2C20099A76A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0665FCEE29ACA2C20099A76A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -38,16 +51,15 @@
 		0665FCF829ACA2C60099A76A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0665FCFA29ACA2C60099A76A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		066B45C129B06BF5003CE5C8 /* DatabasePersonalExpenseTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabasePersonalExpenseTracker.swift; sourceTree = "<group>"; };
-		066B45C829B0C9DF003CE5C8 /* AppLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppLogo.png; sourceTree = "<group>"; };
-		066B45C929B0C9DF003CE5C8 /* PET - onboardingImage.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "PET - onboardingImage.jpeg"; sourceTree = "<group>"; };
-		066B45CA29B0C9DF003CE5C8 /* PET - onboardingImage3.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "PET - onboardingImage3.jpeg"; sourceTree = "<group>"; };
-		066B45CB29B0C9DF003CE5C8 /* PET - onboardingImage2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "PET - onboardingImage2.jpeg"; sourceTree = "<group>"; };
 		067F690B29BAF59400148DEB /* TimelineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineViewController.swift; sourceTree = "<group>"; };
 		067F690E29BB0A6F00148DEB /* TimeLineTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLineTableViewCell.swift; sourceTree = "<group>"; };
+		067F691029BB366800148DEB /* WalletsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletsViewController.swift; sourceTree = "<group>"; };
+		067F691229BB3E1700148DEB /* TimeLineTableHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLineTableHeaderView.swift; sourceTree = "<group>"; };
+		067F691429BB471300148DEB /* SectionHeaderLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeaderLabel.swift; sourceTree = "<group>"; };
+		0685F1D729C0352700C4BBEA /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 		069501A429B47C1E0048924A /* personalExpenseTrackerEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = personalExpenseTrackerEnums.swift; sourceTree = "<group>"; };
 		069501A629B501270048924A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		069501A829B5016D0048924A /* Wallet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wallet.swift; sourceTree = "<group>"; };
-		069501AA29B501E60048924A /* Transactions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transactions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,7 +85,10 @@
 			children = (
 				069501A629B501270048924A /* User.swift */,
 				069501A829B5016D0048924A /* Wallet.swift */,
-				069501AA29B501E60048924A /* Transactions.swift */,
+				0663746A29BF52C6000D217D /* Protocols.swift */,
+				0663746C29BF552D000D217D /* Income.swift */,
+				0663746E29BF5694000D217D /* Expense.swift */,
+				0685F1D729C0352700C4BBEA /* Enums.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -88,10 +103,21 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
+		0663746129BEE5C8000D217D /* TimeLine */ = {
+			isa = PBXGroup;
+			children = (
+				067F691429BB471300148DEB /* SectionHeaderLabel.swift */,
+				067F690E29BB0A6F00148DEB /* TimeLineTableViewCell.swift */,
+				067F691229BB3E1700148DEB /* TimeLineTableHeaderView.swift */,
+			);
+			path = TimeLine;
+			sourceTree = "<group>";
+		};
 		0665FCE029ACA2C20099A76A = {
 			isa = PBXGroup;
 			children = (
 				0665FCEB29ACA2C20099A76A /* PersonalExpenseTracker */,
+				0656126429ADD2660099CD88 /* View */,
 				0665FCEA29ACA2C20099A76A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -112,8 +138,6 @@
 				0665FCF529ACA2C60099A76A /* Assets.xcassets */,
 				0665FCF729ACA2C60099A76A /* LaunchScreen.storyboard */,
 				0665FCFA29ACA2C60099A76A /* Info.plist */,
-				066B45C729B0C9DF003CE5C8 /* images */,
-				0656126429ADD2660099CD88 /* View */,
 				0656126529ADD2740099CD88 /* Model */,
 				0656126629ADD27A0099CD88 /* Controllers */,
 				066B45C029B06BDC003CE5C8 /* Database */,
@@ -127,27 +151,20 @@
 			children = (
 				066B45C129B06BF5003CE5C8 /* DatabasePersonalExpenseTracker.swift */,
 				069501A429B47C1E0048924A /* personalExpenseTrackerEnums.swift */,
+				0663747029BF5780000D217D /* DummyData.swift */,
 			);
 			path = Database;
 			sourceTree = "<group>";
 		};
-		066B45C729B0C9DF003CE5C8 /* images */ = {
-			isa = PBXGroup;
-			children = (
-				066B45C829B0C9DF003CE5C8 /* AppLogo.png */,
-				066B45C929B0C9DF003CE5C8 /* PET - onboardingImage.jpeg */,
-				066B45CA29B0C9DF003CE5C8 /* PET - onboardingImage3.jpeg */,
-				066B45CB29B0C9DF003CE5C8 /* PET - onboardingImage2.jpeg */,
-			);
-			name = images;
-			path = PersonalExpenseTracker/images;
-			sourceTree = SOURCE_ROOT;
-		};
 		067F690D29BAF86C00148DEB /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				067F691029BB366800148DEB /* WalletsViewController.swift */,
+				0663746229BEE6BE000D217D /* AccountViewController.swift */,
+				0663746429BEE718000D217D /* ReportsViewController.swift */,
 				067F690B29BAF59400148DEB /* TimelineViewController.swift */,
-				067F690E29BB0A6F00148DEB /* TimeLineTableViewCell.swift */,
+				0663746829BF3D87000D217D /* InititalViewController.swift */,
+				0663746129BEE5C8000D217D /* TimeLine */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -211,11 +228,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0665FCF929ACA2C60099A76A /* LaunchScreen.storyboard in Resources */,
-				066B45CF29B0C9DF003CE5C8 /* PET - onboardingImage2.jpeg in Resources */,
-				066B45CC29B0C9DF003CE5C8 /* AppLogo.png in Resources */,
-				066B45CD29B0C9DF003CE5C8 /* PET - onboardingImage.jpeg in Resources */,
 				0665FCF629ACA2C60099A76A /* Assets.xcassets in Resources */,
-				066B45CE29B0C9DF003CE5C8 /* PET - onboardingImage3.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -226,18 +239,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				069501AB29B501E60048924A /* Transactions.swift in Sources */,
+				0663746929BF3D87000D217D /* InititalViewController.swift in Sources */,
+				0663746529BEE718000D217D /* ReportsViewController.swift in Sources */,
 				067F690C29BAF59400148DEB /* TimelineViewController.swift in Sources */,
+				0663747129BF5780000D217D /* DummyData.swift in Sources */,
+				0663746329BEE6BE000D217D /* AccountViewController.swift in Sources */,
+				0663746F29BF5694000D217D /* Expense.swift in Sources */,
 				0613115029B6184C00DFF01B /* RegisterViewController.swift in Sources */,
+				067F691329BB3E1700148DEB /* TimeLineTableHeaderView.swift in Sources */,
 				0665FCF129ACA2C20099A76A /* ViewController.swift in Sources */,
 				066B45C229B06BF5003CE5C8 /* DatabasePersonalExpenseTracker.swift in Sources */,
+				0685F1D829C0352700C4BBEA /* Enums.swift in Sources */,
+				0663746B29BF52C6000D217D /* Protocols.swift in Sources */,
 				0665FCED29ACA2C20099A76A /* AppDelegate.swift in Sources */,
 				0665FCEF29ACA2C20099A76A /* SceneDelegate.swift in Sources */,
+				0663746D29BF552D000D217D /* Income.swift in Sources */,
 				069501A729B501270048924A /* User.swift in Sources */,
+				067F691529BB471300148DEB /* SectionHeaderLabel.swift in Sources */,
 				067F690F29BB0A6F00148DEB /* TimeLineTableViewCell.swift in Sources */,
 				069501A529B47C1E0048924A /* personalExpenseTrackerEnums.swift in Sources */,
 				0613114E29B615DA00DFF01B /* LoginViewController.swift in Sources */,
 				069501A929B5016D0048924A /* Wallet.swift in Sources */,
+				067F691129BB366800148DEB /* WalletsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
