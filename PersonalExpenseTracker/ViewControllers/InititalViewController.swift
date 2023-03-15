@@ -13,13 +13,14 @@ class InititalViewController: UITabBarController {
         super.viewDidLoad()
 
         view.backgroundColor = .systemOrange
+//        view.addSubview(TimelineTableNavigationView(frame: CGRect(x: 0, y: 0, width: view.frame.size.width, height: view.frame.size.height)))
         configureTabBar()
         
     }
     
     func configureTabBar(){
         
-       let vc1 = TimelineViewController()
+       let vc1 = UINavigationController(rootViewController: TimelineViewController())
         vc1.title = "name"
        let vc2 = WalletsViewController()
        let vc3 = ReportsViewController()
@@ -38,7 +39,7 @@ class InititalViewController: UITabBarController {
         vc2.tabBarItem.selectedImage = UIImage(systemName: "creditcard.fill")
         vc3.tabBarItem.selectedImage = UIImage(systemName: "chart.bar.doc.horizontal.fill")
         vc4.tabBarItem.selectedImage = UIImage(systemName: "person.fill")
-        
+        print("height of bar ",tabBar.frame.size.height)
     }
 
 }

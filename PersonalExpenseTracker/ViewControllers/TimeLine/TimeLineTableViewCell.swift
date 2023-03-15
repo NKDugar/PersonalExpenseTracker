@@ -44,7 +44,7 @@ class TimeLineTableViewCell: UITableViewCell {
         label.numberOfLines = 0
         //        label.text = " CategoryName "
         label.textColor = .label
-        label.font = UIFont.systemFont(ofSize: 30)
+        label.font = UIFont.systemFont(ofSize: 24)
         label.sizeToFit()
         return label
     }()
@@ -74,7 +74,7 @@ class TimeLineTableViewCell: UITableViewCell {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.numberOfLines = 0
         label.textColor = .systemGreen
-        label.font = UIFont.systemFont(ofSize: 30)
+        label.font = UIFont.systemFont(ofSize: 24)
         label.text = "+₹ 500"
         label.sizeToFit()
         return label

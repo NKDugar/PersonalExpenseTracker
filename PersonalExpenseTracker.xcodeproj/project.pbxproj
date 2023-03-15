@@ -22,12 +22,14 @@
 		0665FCF629ACA2C60099A76A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0665FCF529ACA2C60099A76A /* Assets.xcassets */; };
 		0665FCF929ACA2C60099A76A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0665FCF729ACA2C60099A76A /* LaunchScreen.storyboard */; };
 		066B45C229B06BF5003CE5C8 /* DatabasePersonalExpenseTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 066B45C129B06BF5003CE5C8 /* DatabasePersonalExpenseTracker.swift */; };
+		066DC06229C1C2F7002D1FD5 /* AddTransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 066DC06129C1C2F7002D1FD5 /* AddTransactionViewController.swift */; };
 		067F690C29BAF59400148DEB /* TimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067F690B29BAF59400148DEB /* TimelineViewController.swift */; };
 		067F690F29BB0A6F00148DEB /* TimeLineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067F690E29BB0A6F00148DEB /* TimeLineTableViewCell.swift */; };
 		067F691129BB366800148DEB /* WalletsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067F691029BB366800148DEB /* WalletsViewController.swift */; };
-		067F691329BB3E1700148DEB /* TimeLineTableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067F691229BB3E1700148DEB /* TimeLineTableHeaderView.swift */; };
+		067F691329BB3E1700148DEB /* TimeLineTableHeaderView1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067F691229BB3E1700148DEB /* TimeLineTableHeaderView1.swift */; };
 		067F691529BB471300148DEB /* SectionHeaderLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067F691429BB471300148DEB /* SectionHeaderLabel.swift */; };
 		0685F1D829C0352700C4BBEA /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0685F1D729C0352700C4BBEA /* Enums.swift */; };
+		0685F1DC29C0A6BA00C4BBEA /* TimeLineTableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0685F1DB29C0A6BA00C4BBEA /* TimeLineTableHeaderView.swift */; };
 		069501A529B47C1E0048924A /* personalExpenseTrackerEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 069501A429B47C1E0048924A /* personalExpenseTrackerEnums.swift */; };
 		069501A729B501270048924A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 069501A629B501270048924A /* User.swift */; };
 		069501A929B5016D0048924A /* Wallet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 069501A829B5016D0048924A /* Wallet.swift */; };
@@ -51,12 +53,14 @@
 		0665FCF829ACA2C60099A76A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0665FCFA29ACA2C60099A76A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		066B45C129B06BF5003CE5C8 /* DatabasePersonalExpenseTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabasePersonalExpenseTracker.swift; sourceTree = "<group>"; };
+		066DC06129C1C2F7002D1FD5 /* AddTransactionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTransactionViewController.swift; sourceTree = "<group>"; };
 		067F690B29BAF59400148DEB /* TimelineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineViewController.swift; sourceTree = "<group>"; };
 		067F690E29BB0A6F00148DEB /* TimeLineTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLineTableViewCell.swift; sourceTree = "<group>"; };
 		067F691029BB366800148DEB /* WalletsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletsViewController.swift; sourceTree = "<group>"; };
-		067F691229BB3E1700148DEB /* TimeLineTableHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLineTableHeaderView.swift; sourceTree = "<group>"; };
+		067F691229BB3E1700148DEB /* TimeLineTableHeaderView1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLineTableHeaderView1.swift; sourceTree = "<group>"; };
 		067F691429BB471300148DEB /* SectionHeaderLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeaderLabel.swift; sourceTree = "<group>"; };
 		0685F1D729C0352700C4BBEA /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
+		0685F1DB29C0A6BA00C4BBEA /* TimeLineTableHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLineTableHeaderView.swift; sourceTree = "<group>"; };
 		069501A429B47C1E0048924A /* personalExpenseTrackerEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = personalExpenseTrackerEnums.swift; sourceTree = "<group>"; };
 		069501A629B501270048924A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		069501A829B5016D0048924A /* Wallet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wallet.swift; sourceTree = "<group>"; };
@@ -76,6 +80,8 @@
 		0656126429ADD2660099CD88 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				0685F1DB29C0A6BA00C4BBEA /* TimeLineTableHeaderView.swift */,
+				067F691229BB3E1700148DEB /* TimeLineTableHeaderView1.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -108,7 +114,7 @@
 			children = (
 				067F691429BB471300148DEB /* SectionHeaderLabel.swift */,
 				067F690E29BB0A6F00148DEB /* TimeLineTableViewCell.swift */,
-				067F691229BB3E1700148DEB /* TimeLineTableHeaderView.swift */,
+				067F690B29BAF59400148DEB /* TimelineViewController.swift */,
 			);
 			path = TimeLine;
 			sourceTree = "<group>";
@@ -162,8 +168,8 @@
 				067F691029BB366800148DEB /* WalletsViewController.swift */,
 				0663746229BEE6BE000D217D /* AccountViewController.swift */,
 				0663746429BEE718000D217D /* ReportsViewController.swift */,
-				067F690B29BAF59400148DEB /* TimelineViewController.swift */,
 				0663746829BF3D87000D217D /* InititalViewController.swift */,
+				066DC06129C1C2F7002D1FD5 /* AddTransactionViewController.swift */,
 				0663746129BEE5C8000D217D /* TimeLine */,
 			);
 			path = ViewControllers;
@@ -246,7 +252,8 @@
 				0663746329BEE6BE000D217D /* AccountViewController.swift in Sources */,
 				0663746F29BF5694000D217D /* Expense.swift in Sources */,
 				0613115029B6184C00DFF01B /* RegisterViewController.swift in Sources */,
-				067F691329BB3E1700148DEB /* TimeLineTableHeaderView.swift in Sources */,
+				067F691329BB3E1700148DEB /* TimeLineTableHeaderView1.swift in Sources */,
+				0685F1DC29C0A6BA00C4BBEA /* TimeLineTableHeaderView.swift in Sources */,
 				0665FCF129ACA2C20099A76A /* ViewController.swift in Sources */,
 				066B45C229B06BF5003CE5C8 /* DatabasePersonalExpenseTracker.swift in Sources */,
 				0685F1D829C0352700C4BBEA /* Enums.swift in Sources */,
@@ -260,6 +267,7 @@
 				069501A529B47C1E0048924A /* personalExpenseTrackerEnums.swift in Sources */,
 				0613114E29B615DA00DFF01B /* LoginViewController.swift in Sources */,
 				069501A929B5016D0048924A /* Wallet.swift in Sources */,
+				066DC06229C1C2F7002D1FD5 /* AddTransactionViewController.swift in Sources */,
 				067F691129BB366800148DEB /* WalletsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
