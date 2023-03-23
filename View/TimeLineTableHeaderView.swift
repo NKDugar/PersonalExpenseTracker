@@ -15,6 +15,8 @@ class TimeLineTableHeaderView: UIView {
         
     }
     
+    
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -32,6 +34,8 @@ class TimeLineTableHeaderView: UIView {
         configureConstraints()
       
     }
+    
+  
     
     @objc func AllWalletsButtonTapped(){
         print(#function)

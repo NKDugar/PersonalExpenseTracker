@@ -8,19 +8,21 @@
 import Foundation
 
 struct Expense: TransactionsContract {
+      
     
-    var transactionID: String
-    var transactionCategory: TransactionCategory
+    var transactionCategory: ExpenseCategory
     var transactionAmount: Int
     var date: String
     var description: String
     let transactionType = "Expense"
     
-    init(transactionID: String, transactionCategory: TransactionCategory, transactionAmount: Int , date: String, description: String) {
-        self.transactionID = transactionID
+    init(transactionCategory: ExpenseCategory, transactionAmount: Int , date: String, description: String) {
+        
         self.transactionCategory = transactionCategory
         self.transactionAmount = transactionAmount
         self.date = date
         self.description = description
     }
+    
+    
 }

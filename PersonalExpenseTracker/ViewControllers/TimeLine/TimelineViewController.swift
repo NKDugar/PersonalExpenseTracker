@@ -12,7 +12,6 @@ class TimelineViewController: UIViewController {
     private let timelineTableView = UITableView(frame: .zero, style: .plain)
     
     
-    
     private var cellCount = 10
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +28,9 @@ class TimelineViewController: UIViewController {
     
     @objc func AddButtonDidTap(){
         print(" Add Button tapped ")
+        let vc = AddTransaction()
+        vc.modalPresentationStyle = .popover
+       present(vc, animated: true)
     }
     
     private let chartView: UIView = {
@@ -170,6 +172,6 @@ extension TimelineViewController: UIScrollViewDelegate {
     }
     
     
-    
 }
+
 

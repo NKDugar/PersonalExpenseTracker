@@ -10,6 +10,8 @@ import SQLite3
 
 class Database {
     
+    
+    
    private  var dbPointer: OpaquePointer?
     
     let filePath = try! FileManager.default.url(for: .desktopDirectory, in: .userDomainMask, appropriateFor: nil, create: true)

@@ -11,7 +11,8 @@ public struct User {
     let name: String
     let emailId: String
     let password: String
-    var wallets =  [Wallet]()
+    var UserWallets =  [Wallet]()
+    var walletID = 0
    
     init(name: String, emailId: String, password: String) {
         self.name = name
@@ -19,6 +20,10 @@ public struct User {
         self.password = password
     }
 
+    mutating func addWallet(wallet: Wallet){
+        UserWallets.append(wallet)
+        walletID += 1
+    }
     
     
 }

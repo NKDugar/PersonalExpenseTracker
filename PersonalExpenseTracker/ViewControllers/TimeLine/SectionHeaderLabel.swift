@@ -15,7 +15,7 @@ class SectionHeaderLabel: UITableViewHeaderFooterView {
     override init(reuseIdentifier: String?) {
         super.init(reuseIdentifier: reuseIdentifier)
 //        contentView.backgroundColor = .cyan
-        contentView.addSubview(HeaderLabel)
+        contentView.addSubview(dateLable)
         contentView.addSubview(totalAmountLabel)
         configureConstraints()
     }
@@ -24,7 +24,7 @@ class SectionHeaderLabel: UITableViewHeaderFooterView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    private let HeaderLabel: UILabel = {
+     var dateLable: UILabel = {
        var label = UILabel()
        label.translatesAutoresizingMaskIntoConstraints = false
 //       label.numberOfLines = 0
@@ -36,7 +36,7 @@ class SectionHeaderLabel: UITableViewHeaderFooterView {
        return label
    }()
     
-    private let totalAmountLabel: UILabel = {
+     var totalAmountLabel: UILabel = {
         var label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = "AMOUNT"
@@ -51,9 +51,9 @@ class SectionHeaderLabel: UITableViewHeaderFooterView {
     func configureConstraints(){
         
         let HeaderLabelConstraints = [
-            HeaderLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor,constant: 16),
-            HeaderLabel.topAnchor.constraint(equalTo: contentView.topAnchor,constant: 0),
-            HeaderLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor,constant: 0)
+            dateLable.leadingAnchor.constraint(equalTo: contentView.leadingAnchor,constant: 16),
+            dateLable.topAnchor.constraint(equalTo: contentView.topAnchor,constant: 0),
+            dateLable.bottomAnchor.constraint(equalTo: contentView.bottomAnchor,constant: 0)
 //            if we giving any other value for bottom nchor , it is showing constraint break
             
         ]

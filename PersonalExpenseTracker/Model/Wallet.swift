@@ -9,20 +9,24 @@ import Foundation
 
 struct Wallet{
     
-    var walletId: String
     var walletName: String
     var walletBalance: Int
     let walletType: WalletType
+    var transactionId: Int = 0
     var transactions =  [TransactionsContract]()
     
-    init(walletId: String, walletName: String, walletBalance: Int, walletType: WalletType, transactions: [TransactionsContract] = [TransactionsContract]()) {
-        self.walletId = walletId
+    init(walletName: String, walletBalance: Int, walletType: WalletType) {
+      
         self.walletName = walletName
         self.walletBalance = walletBalance
         self.walletType = walletType
-        self.transactions = transactions
+        
     }
     
-    
+    mutating func addTransaction(transaction: TransactionsContract){
+        transactions.append(transaction)
+        transactionId += 1
+    }
+
 }
 

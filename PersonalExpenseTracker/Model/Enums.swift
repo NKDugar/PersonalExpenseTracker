@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-enum TransactionCategory: String, CaseIterable {
+enum ExpenseCategory: String, CaseIterable {
     
     case FoodAndDrink = "Food And Drink"
     case Shopping = "Shopping"
@@ -67,6 +67,37 @@ enum TransactionCategory: String, CaseIterable {
         
         }
 
+}
+
+enum incomeCategory: String , CaseIterable {
+    
+    case Salary = "Salary"
+    case Business = "Business"
+    case Gifts = "Gifts"
+    case Loan = "Loan"
+    case ExtraIncome = "ExtraIncome"
+    case Insurance = "Insurance"
+    case Other = "Other"
+    
+    var image: UIImage? {
+        switch self {
+        case .Salary:
+            return UIImage(systemName: "Salary")
+        case .Business:
+            return UIImage(systemName: "Business")
+        case .Gifts:
+            return UIImage(systemName: "Gifts")
+        case .Loan:
+            return UIImage(systemName: "Loan")
+        case .ExtraIncome:
+            return UIImage(systemName: "Extra Income")
+        case .Insurance:
+            return UIImage(systemName: "Insurance")
+        case .Other:
+            return UIImage(systemName: "Other")
+        }
+    }
+    
 }
 
 enum WalletType: String, CaseIterable {

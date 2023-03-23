@@ -14,14 +14,26 @@ class DummyData {
     }
     
     static let shared = DummyData()
-    static var datesAndExpenses = [String:[TransactionsContract]]()
+    static var userDetails = [String : User]()
     
+    private var datesAndTransaction = [String : [TransactionsContract]]()
     
     func addDummy(){
         
-        DummyData.datesAndExpenses["12-03-2023"] = [Expense(transactionID: "1", transactionCategory: .HealthCare, transactionAmount: 1100, date: "12-03-2023", description: "medical expense"),Expense(transactionID: "2", transactionCategory: .Education, transactionAmount: 1300, date: "12-03-2023", description: "education expense"),Expense(transactionID: "3", transactionCategory: .Others, transactionAmount: 1500, date: "12-03-2023", description: "other expense")]
+       
+        var user = User(name: "naveen", emailId: "naveen@gmail.com", password: "12345")
+        var wallet = Wallet(walletName: "Wallet1", walletBalance: 1000, walletType: .Cash)
         
-        DummyData.datesAndExpenses["13-03-2023"] = [Expense(transactionID: "1", transactionCategory: .HealthCare, transactionAmount: 1100, date: "13-03-2023", description: "medical expense"),Expense(transactionID: "2", transactionCategory: .Education, transactionAmount: 1300, date: "13-03-2023", description: "education expense"),Expense(transactionID: "3", transactionCategory: .Others, transactionAmount: 1500, date: "13-03-2023", description: "other expense"),Expense(transactionID: "4", transactionCategory: .HealthCare, transactionAmount: 1700, date: "13-03-2023", description: "medical expense"),Expense(transactionID: "5", transactionCategory: .Education, transactionAmount: 1900, date: "13-03-2023", description: "education expense"),Expense(transactionID: "6", transactionCategory: .Others, transactionAmount: 2100, date: "13-03-2023", description: "other expense")]
+        user.addWallet(wallet: wallet)
+        
+        let transaction1 = Income(transactionCategory: .Loan, transactionAmount: 1000, date: "12-03-2023", description: "income - loan")
+        let transaction2 = Expense(transactionCategory: .HealthCare, transactionAmount: 2000, date: "12-03-2023", description: "expense - healthcare")
+        
+        wallet.addTransaction(transaction: transaction1)
+        wallet.addTransaction(transaction: transaction2)
+        
+        
+        
         
         
     }
